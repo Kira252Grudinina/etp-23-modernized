@@ -166,14 +166,6 @@ python scripts/test_dataset.py
 python scripts/test_api.py
 ```
 
-### Training
-
-Training was performed on Google Colab using the provided notebook:
-1. Upload `Train_Sexism_Classifier_Colab.ipynb` to Colab
-2. Enable GPU runtime
-3. Upload EDOS dataset
-4. Run all cells (~90 minutes)
-
 ---
 
 ## Technology Stack
@@ -194,7 +186,7 @@ Training was performed on Google Colab using the provided notebook:
 - Université de Lorraine, Master's NLP Program
 - Original codebase: Jupyter notebooks
 
-### Modernization (2025)
+### Modernization (2026)
 - Kira Grudinina
 - Restructured to production-ready system
 - Added API, Docker, and comprehensive testing

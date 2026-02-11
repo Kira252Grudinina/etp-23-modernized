@@ -22,8 +22,9 @@ dependencies = [
     "nltk>=3.8.1",
     "emoji>=2.10.0",
     "accelerate>=0.28.0",
+    "gradio>=4.20.0",        
+    "requests>=2.31.0",      
 ]
-
 [project.optional-dependencies]
 dev = [
     "pytest>=8.1.0",

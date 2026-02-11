@@ -20,9 +20,11 @@ Originally developed as Master's NLP research at Université de Lorraine (2023),
 ---
 
 ## Quick Start
+
+### Installation
 ```bash
-# Clone and setup
-git clone https://github.com/Kira252Grudinina/etp-23
+# Clone repository
+git clone [your-repo-url]
 cd etp-23
 
 # Create virtual environment
@@ -33,6 +35,34 @@ source venv/bin/activate
 pip install -e .
 ```
 
+### Run the API
+```bash
+# Start the API server
+python run_api.py
+
+# API will be available at: http://127.0.0.1:8000
+# Interactive docs at: http://127.0.0.1:8000/docs
+```
+
+### Quick Test
+```bash
+# In a new terminal
+python scripts/test_api.py
+```
+
+### Use the API
+```python
+import requests
+
+response = requests.post(
+    "http://127.0.0.1:8000/predict",
+    json={"text": "Women should stay in the kitchen"}
+)
+
+result = response.json()
+print(f"Label: {result['label']}")        # sexist
+print(f"Confidence: {result['confidence']}")  # 0.668
+```
 ---
 
 ## Project Structure
@@ -51,7 +81,7 @@ etp-23/
 │   └── archive_2023/          # Original research notebooks
 ├── scripts/                   # Utility scripts
 └─
-�- [x] Modern Python package structure
+? [x] Modern Python package structure
 - [x] Dependencies: transformers 5.1, torch 2.10, pandas 3.0
 - [x] Configuration management system
 - [x] Text preprocessing module with caching
